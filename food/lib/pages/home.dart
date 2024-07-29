@@ -57,7 +57,7 @@ class Home extends StatelessWidget {
                                   fontWeight: FontWeight.w600,
                                   color: Colors.white),
                             ),
-                            //Image.asset('assets/photo.png'),
+                           // Image.asset('assets/photo.png'),
                           ],
                         ),
                       ),
