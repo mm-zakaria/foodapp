@@ -53,11 +53,16 @@ class Home extends StatelessWidget {
                             Text(
                               '40% Off During\nEid-Ul-Adha',
                               style: TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.white),
                             ),
-                           // Image.asset('assets/photo.png'),
+                            Align(
+                                alignment: Alignment.bottomRight,
+                                child: Image.asset(
+                                  'assets/photo.png',
+                                  width: 63,
+                                )),
                           ],
                         ),
                       ),
@@ -79,11 +84,16 @@ class Home extends StatelessWidget {
                             Text(
                               '10% Extra Off\nUsing Credit Card',
                               style: TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.blue),
                             ),
-                            //Image.asset('assets/photo.png'),
+                            Align(
+                                alignment: Alignment.bottomRight,
+                                child: Image.asset(
+                                  'assets/photo.png',
+                                  width: 60,
+                                )),
                           ],
                         ),
                       ),
@@ -105,11 +115,16 @@ class Home extends StatelessWidget {
                             Text(
                               'Click here For\n Best Discount',
                               style: TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.black26),
                             ),
-                            //Image.asset('assets/photo.png'),
+                            Align(
+                                alignment: Alignment.bottomRight,
+                                child: Image.asset(
+                                  'assets/photo.png',
+                                  width: 60,
+                                )),
                           ],
                         ),
                       ),
@@ -178,23 +193,24 @@ class Home extends StatelessWidget {
                 height: 30,
               ),
               Container(
-                height: 200,
-                width: 200,
+                height: 150,
+                width: 375,
                 decoration: BoxDecoration(color: Colors.grey),
-                child: Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    Positioned(
-                      top: -20,
-                      right: 50,
-                      child: Container(
-                        height: 100,
-                        width: 100,
-                        color: Colors.amber,
-                      ),
-                    ),
-                  ],
-                ),
+                child: Image.asset('assets/photo.png'),
+                // child: Stack(
+                //   clipBehavior: Clip.none,
+                //   children: [
+                //     Positioned(
+                //       top: -20,
+                //       right: 50,
+                //       child: Container(
+                //         height: 100,
+                //         width: 100,
+                //         color: Colors.white,
+                //       ),
+                //     ),
+                //   ],
+                // ),
               )
             ],
           ),
