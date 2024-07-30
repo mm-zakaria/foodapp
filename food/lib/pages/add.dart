@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Add extends StatelessWidget {
   TextEditingController _emailcontroller = TextEditingController();
   TextEditingController _passwordcontroller = TextEditingController();
   final _formkey = GlobalKey<FormState>();
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +47,10 @@ class Add extends StatelessWidget {
                   child: ElevatedButton(
                       onPressed: () {
                         if (_formkey.currentState!.validate()) {
-
+                          Fluttertoast.showToast(msg: "validation successful");
+                        } else {
+                          Fluttertoast.showToast(
+                              msg: "Error", gravity: ToastGravity.CENTER);
                         }
                       },
                       child: Text("continue"))),

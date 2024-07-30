@@ -218,8 +218,8 @@ class Home extends StatelessWidget {
                     height: 10,
                   ),
                   Container(
-                    height: 175,
-                    width: 175,
+                    height: 100,
+                    width: 100,
                     decoration: BoxDecoration(color: Colors.grey),
                     child: Image.asset('assets/photo.png'),
                   ),
