@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food/bottom-nav-controller.dart';
+import 'package:food/second_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,12 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         useMaterial3: false,
       ),
-      home: Splash(),
+      routes: {
+        '/splash': (_) => Splash(),
+        '/bottomnav': (_) => BottonNavController(),
+        '/second': (_) => SecondScreen(),
+      },
+      initialRoute: '/splash',
     );
   }
 }

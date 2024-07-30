@@ -192,25 +192,38 @@ class Home extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              Container(
-                height: 150,
-                width: 375,
-                decoration: BoxDecoration(color: Colors.grey),
-                child: Image.asset('assets/photo.png'),
-                // child: Stack(
-                //   clipBehavior: Clip.none,
-                //   children: [
-                //     Positioned(
-                //       top: -20,
-                //       right: 50,
-                //       child: Container(
-                //         height: 100,
-                //         width: 100,
-                //         color: Colors.white,
-                //       ),
-                //     ),
-                //   ],
-                // ),
+              Column(
+                children: [
+                  Container(
+                    height: 175,
+                    width: 175,
+                    decoration: BoxDecoration(color: Colors.grey),
+                    child: Image.asset('assets/photo.png'),
+                    // child: Stack(
+                    //   clipBehavior: Clip.none,
+                    //   children: [
+                    //     Positioned(
+                    //       top: -20,
+                    //       right: 50,
+                    //       child: Container(
+                    //         height: 100,
+                    //         width: 100,
+                    //         color: Colors.white,
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 175,
+                    width: 175,
+                    decoration: BoxDecoration(color: Colors.grey),
+                    child: Image.asset('assets/photo.png'),
+                  ),
+                ],
               )
             ],
           ),
