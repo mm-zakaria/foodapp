@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food/bottom-nav-controller.dart';
 import 'package:food/second_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,9 +20,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-        scaffoldBackgroundColor: Colors.white,
-        useMaterial3: false,
+        textTheme: GoogleFonts.akayaTelivigalaTextTheme(
+          Theme.of(context).textTheme.apply()
+        )
+        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+        // scaffoldBackgroundColor: Colors.white,
+        // useMaterial3: false,
       ),
       routes: {
         '/splash': (_) => Splash(),

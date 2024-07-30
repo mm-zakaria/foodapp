@@ -61,7 +61,7 @@ class Home extends StatelessWidget {
                                 alignment: Alignment.bottomRight,
                                 child: Image.asset(
                                   'assets/photo.png',
-                                  width: 63,
+                                  width: 50,
                                 )),
                           ],
                         ),
@@ -92,7 +92,7 @@ class Home extends StatelessWidget {
                                 alignment: Alignment.bottomRight,
                                 child: Image.asset(
                                   'assets/photo.png',
-                                  width: 60,
+                                  width: 50,
                                 )),
                           ],
                         ),
@@ -123,7 +123,7 @@ class Home extends StatelessWidget {
                                 alignment: Alignment.bottomRight,
                                 child: Image.asset(
                                   'assets/photo.png',
-                                  width: 60,
+                                  width: 50,
                                 )),
                           ],
                         ),
