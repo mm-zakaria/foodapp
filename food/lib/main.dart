@@ -5,8 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:food/bottom-nav-controller.dart';
 import 'package:food/second_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  Box box = await Hive.openBox('contact-list');
+
   runApp(const MyApp());
 }
 
@@ -20,13 +25,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        textTheme: GoogleFonts.akayaTelivigalaTextTheme(
-          Theme.of(context).textTheme.apply()
-        )
-        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-        // scaffoldBackgroundColor: Colors.white,
-        // useMaterial3: false,
-      ),
+          textTheme: GoogleFonts.akayaTelivigalaTextTheme(
+              Theme.of(context).textTheme.apply())
+          // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+          // scaffoldBackgroundColor: Colors.white,
+          // useMaterial3: false,
+          ),
       routes: {
         '/splash': (_) => Splash(),
         '/bottomnav': (_) => BottonNavController(),
