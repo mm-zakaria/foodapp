@@ -29,6 +29,8 @@ class _AccountState extends State<Account> {
               controller: _controller,
             ),
             SizedBox(
+
+             
               width: 350,
               child: ElevatedButton(
                   onPressed: () async {
@@ -43,6 +45,19 @@ class _AccountState extends State<Account> {
                   },
                   child: Text("Add New Contact")),
             ),
+          Expanded(child: ListView.builder(
+            itemCount: contactBox!.keys.toString().length,
+            
+            itemBuilder: (_,index){
+              return Card(
+                elevation: 4,
+                child: ListTile(
+                  title: Text(contactBox!.keys.toString()),
+                ),
+              );
+
+
+            }))
           ],
         ),
       ),
