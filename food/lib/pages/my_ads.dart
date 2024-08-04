@@ -17,32 +17,66 @@ class MyAds extends StatelessWidget {
               style: TextStyle(color: Colors.black),
             ),
           ),
-          bottom: TabBar(
-            labelColor: Colors.black,
-            unselectedLabelColor: Colors.grey,
-            tabs: [
-              Tab(
-                text: "My Ads",
-              ),
-              Tab(
-                text: "My Favorite",
-              ),
-            ],
-          ),
-          //  Expanded(
-          //   child: TabBarView(
-          //     children: [
-          //       Container(),
-          //       Container(),
-          //     ],),
-          // ),
         ),
-        body: Center(
-          child: Text('my_ads'),
+        body: Column(
+          children: [
+            TabBar(
+              labelColor: Colors.black,
+              unselectedLabelColor: Colors.grey,
+              tabs: [
+                Tab(
+                  text: "My Ads",
+                ),
+                Tab(
+                  text: "My Favorite",
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Expanded(
+                child: TabBarView(children: [
+              Container(
+                child: Column(
+                  children: [
+                    Card(
+                      elevation: 5,
+                      child: ListTile(
+                        leading: Image.asset('assets/photo.png'),
+                        title: Text("Apple Watch"),
+                        subtitle: Text("Series 8"),
+                        trailing: Text("\$800"),
+                      ),
+                    ),
+                    Card(
+                      elevation: 5,
+                      child: ListTile(
+                        leading: Image.asset('assets/photo.png'),
+                        title: Text("Apple Watch"),
+                        subtitle: Text("Series 8"),
+                        trailing: Text("\$800"),
+                      ),
+                    ),
+                    Card(
+                      elevation: 5,
+                      child: ListTile(
+                        leading: Image.asset('assets/photo.png'),
+                        title: Text("Apple Watch"),
+                        subtitle: Text("Series 8"),
+                        trailing: Text("\$800"),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.red,
+              )
+            ]))
+          ],
         ),
       ),
     );
   }
 }
-
-
